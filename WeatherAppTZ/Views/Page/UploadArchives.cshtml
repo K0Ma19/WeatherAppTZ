@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Загрузка погодных данных";
+}
+
+<h1>Загрузка погодных данных</h1>
+
+<div>
+    @using (Html.BeginForm("Upload", "Upload", FormMethod.Post, new { enctype = "multipart/form-data", id = "frm-excel" }))
+    {
+        <div>
+            Загрузите Excel-файл:
+            <input type="file" name="files" id="files" multiple />
+            <div>
+                <input type="submit" value="Загрузить" />
+            </div>
+        </div>
+    }
+</div>
+
